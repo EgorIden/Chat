@@ -7,7 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class LoginViewController: UIViewController {
+	private let loginView = LoginView()
+
+	override func loadView() {
+		self.view = self.loginView
+	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		CE041C092C6A0E980011C0E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE041C082C6A0E980011C0E8 /* AppDelegate.swift */; };
 		CE041C0B2C6A0E980011C0E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE041C0A2C6A0E980011C0E8 /* SceneDelegate.swift */; };
-		CE041C0D2C6A0E980011C0E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE041C0C2C6A0E980011C0E8 /* ViewController.swift */; };
+		CE041C0D2C6A0E980011C0E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE041C0C2C6A0E980011C0E8 /* LoginViewController.swift */; };
 		CE041C132C6A0E980011C0E8 /* chat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE041C112C6A0E980011C0E8 /* chat.xcdatamodeld */; };
 		CE041C152C6A0E9A0011C0E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE041C142C6A0E9A0011C0E8 /* Assets.xcassets */; };
 		CE041C182C6A0E9A0011C0E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE041C162C6A0E9A0011C0E8 /* LaunchScreen.storyboard */; };
 		CE041C232C6A0E9A0011C0E8 /* chatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE041C222C6A0E9A0011C0E8 /* chatTests.swift */; };
 		CE041C2D2C6A0E9A0011C0E8 /* chatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE041C2C2C6A0E9A0011C0E8 /* chatUITests.swift */; };
 		CE041C2F2C6A0E9A0011C0E8 /* chatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE041C2E2C6A0E9A0011C0E8 /* chatUITestsLaunchTests.swift */; };
+		CEE33B5A2C6A773100D482F9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE33B592C6A773100D482F9 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		CE041C052C6A0E980011C0E8 /* chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE041C082C6A0E980011C0E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE041C0A2C6A0E980011C0E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE041C0C2C6A0E980011C0E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE041C0C2C6A0E980011C0E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE041C122C6A0E980011C0E8 /* chat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = chat.xcdatamodel; sourceTree = "<group>"; };
 		CE041C142C6A0E9A0011C0E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE041C172C6A0E9A0011C0E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		CE041C282C6A0E9A0011C0E8 /* chatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE041C2C2C6A0E9A0011C0E8 /* chatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatUITests.swift; sourceTree = "<group>"; };
 		CE041C2E2C6A0E9A0011C0E8 /* chatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEE33B592C6A773100D482F9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,8 @@
 			children = (
 				CE041C082C6A0E980011C0E8 /* AppDelegate.swift */,
 				CE041C0A2C6A0E980011C0E8 /* SceneDelegate.swift */,
-				CE041C0C2C6A0E980011C0E8 /* ViewController.swift */,
+				CEE33B592C6A773100D482F9 /* LoginView.swift */,
+				CE041C0C2C6A0E980011C0E8 /* LoginViewController.swift */,
 				CE041C142C6A0E9A0011C0E8 /* Assets.xcassets */,
 				CE041C162C6A0E9A0011C0E8 /* LaunchScreen.storyboard */,
 				CE041C192C6A0E9A0011C0E8 /* Info.plist */,
@@ -257,9 +260,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE041C0D2C6A0E980011C0E8 /* ViewController.swift in Sources */,
+				CE041C0D2C6A0E980011C0E8 /* LoginViewController.swift in Sources */,
 				CE041C132C6A0E980011C0E8 /* chat.xcdatamodeld in Sources */,
 				CE041C092C6A0E980011C0E8 /* AppDelegate.swift in Sources */,
+				CEE33B5A2C6A773100D482F9 /* LoginView.swift in Sources */,
 				CE041C0B2C6A0E980011C0E8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
