@@ -16,9 +16,14 @@ final class LoginViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		self.loginView.navDelegate = self
 	}
-
-
 }
 
+extension LoginViewController: ILoginNavDelegate
+{
+	func showRegister() {
+		let registerVC = RegisterViewController()
+		self.present(registerVC, animated: true)
+	}
+}
