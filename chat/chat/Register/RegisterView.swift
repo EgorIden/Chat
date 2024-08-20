@@ -1,5 +1,5 @@
 //
-//  LoginView.swift
+//  RegisterView.swift.swift
 //  chat
 //
 //  Created by egor on 13.08.2024.
@@ -7,10 +7,12 @@
 
 import UIKit
 
-final class LoginView: UIView 
+final class RegisterView: UIView
 {
+	var navDelegate: ILoginNavDelegate?
+
 	private let stackView: UIStackView = {
-		let view = UIStackView(frame: .zero)
+		let view = UIStackView()
 		view.axis = .vertical
 		view.spacing = 8
 		view.alignment = .fill
@@ -20,8 +22,8 @@ final class LoginView: UIView
 		return view
 	}()
 
-	private let nameTextView: UITextField = {
-		let view = UITextField(frame: .zero)
+	private let userNameTextView: UITextField = {
+		let view = UITextField()
 		view.placeholder = "Username"
 		view.backgroundColor = .lightGray
 		view.translatesAutoresizingMaskIntoConstraints = false
@@ -29,7 +31,7 @@ final class LoginView: UIView
 	}()
 
 	private let emailTextView: UITextField = {
-		let view = UITextField(frame: .zero)
+		let view = UITextField()
 		view.placeholder = "Email"
 		view.backgroundColor = .lightGray
 		view.translatesAutoresizingMaskIntoConstraints = false
@@ -37,16 +39,16 @@ final class LoginView: UIView
 	}()
 
 	private let passwordTextView: UITextField = {
-		let view = UITextField(frame: .zero)
+		let view = UITextField()
 		view.placeholder = "Password"
 		view.backgroundColor = .lightGray
 		view.translatesAutoresizingMaskIntoConstraints = false
 		return view
 	}()
 
-	private let loginBtn: UIButton = {
-		let btn = UIButton(frame: .zero)
-		btn.setTitle("Login", for: .normal)
+	private lazy var registerBtn: UIButton = {
+		let btn = UIButton()
+		btn.setTitle("Register", for: .normal)
 		btn.setTitleColor(.white, for: .normal)
 		btn.backgroundColor = .lightGray
 		btn.translatesAutoresizingMaskIntoConstraints = false
@@ -57,14 +59,14 @@ final class LoginView: UIView
 		super.init(frame: frame)
 		self.configureUI()
 	}
-	
+
 	@available(*, unavailable)
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
 }
 
-private extension LoginView
+private extension RegisterView
 {
 	func configureUI() {
 		self.setupView()
@@ -75,8 +77,9 @@ private extension LoginView
 	func setupView() {
 		self.backgroundColor = .white
 		self.addSubview(self.stackView)
-		self.addSubview(self.loginBtn)
-		self.stackView.addArrangedSubview(self.nameTextView)
+		self.addSubview(self.registerBtn)
+
+		self.stackView.addArrangedSubview(self.userNameTextView)
 		self.stackView.addArrangedSubview(self.emailTextView)
 		self.stackView.addArrangedSubview(self.passwordTextView)
 	}
@@ -89,9 +92,13 @@ private extension LoginView
 		self.trailingAnchor.constraint(equalTo: self.stackView.trailingAnchor, constant: 12).isActive = true
 		self.stackView.heightAnchor.constraint(equalToConstant: 200).isActive = true
 
-		self.loginBtn.leadingAnchor.constraint(equalTo: self.stackView.leadingAnchor).isActive = true
-		self.loginBtn.trailingAnchor.constraint(equalTo: self.stackView.trailingAnchor).isActive = true
-		self.loginBtn.topAnchor.constraint(equalTo: self.stackView.bottomAnchor, constant: 24).isActive = true
-		self.loginBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
+		self.registerBtn.leadingAnchor.constraint(equalTo: self.stackView.leadingAnchor).isActive = true
+		self.registerBtn.trailingAnchor.constraint(equalTo: self.stackView.trailingAnchor).isActive = true
+		self.registerBtn.topAnchor.constraint(equalTo: self.stackView.bottomAnchor, constant: 24).isActive = true
+		self.registerBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
+	}
+
+	@objc func registerBtnTapped() {
+		self.navDelegate?.showRegister()
 	}
 }
